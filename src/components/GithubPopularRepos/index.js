@@ -28,7 +28,7 @@ class GithubPopularRepos extends Component {
   state = {
     dataList: [],
     activeTab: languageFiltersData[0].id,
-    apiStatus: apiStatusConst.initial,
+    apiStatus: apiStatusConst.inProgress,
   }
 
   componentDidMount() {
@@ -60,7 +60,13 @@ class GithubPopularRepos extends Component {
 
   renderLoadingView = () => (
     <div testid="loader">
-      <Loader type="ThreeDots" color="#0284c7" height={80} width={80} />
+      <Loader
+        type="ThreeDots"
+        className="load"
+        color="#0284c7"
+        height={80}
+        width={80}
+      />
     </div>
   )
 
@@ -92,7 +98,7 @@ class GithubPopularRepos extends Component {
 
     switch (apiStatus) {
       case apiStatusConst.success:
-        return this.renderRepoListView()
+        return this.renderPRepoListView()
       case apiStatusConst.failure:
         return this.renderFailureView()
       case apiStatusConst.inProgress:
@@ -103,7 +109,10 @@ class GithubPopularRepos extends Component {
   }
 
   onSelectLanguage = id => {
-    this.setState({activeTab: id}, this.getItems)
+    this.setState(
+      {activeTab: id, apiStatus: apiStatusConst.inProgress},
+      this.getItems,
+    )
   }
 
   renderButton = () => {
@@ -129,7 +138,7 @@ class GithubPopularRepos extends Component {
         <div>
           <h1 className="pop">Popular</h1>
           {this.renderButton()}
-          {this.renderPRepoListView()}
+          {this.renderItemsView()}
         </div>
       </>
     )
