@@ -1,0 +1,30 @@
+.image {
+  height: 90px;
+  width: 120px;
+  border-radius: 4px;
+}
+.min-con {
+  display: flex;
+  flex-direction: row;
+  height: 30px;
+  width: 180px;
+}
+.logo {
+  align-self: center;
+  height: 10px;
+  width: 15px;
+  margin-top: 23px;
+  margin-right: 10px;
+}
+
+li {
+  list-style-type: none;
+  max-width: 200px;
+  background-color: #f8f8ff;
+  padding: 20px 20px 40px 40px;
+  margin: 10px;
+}
+h4 {
+  text-align: center;
+  color: #e73959;
+}

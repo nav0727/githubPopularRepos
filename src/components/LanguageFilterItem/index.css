@@ -1,0 +1,18 @@
+.normal {
+  color: #0284c7;
+  border: 2px #0284c7;
+  width: 100px;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.list {
+  display: flex;
+  width: 100vw;
+  background-color: #fff;
+}
+
+.decoration {
+  background-color: #fff;
+  border: none;
+}

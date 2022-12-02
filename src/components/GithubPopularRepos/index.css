@@ -1,0 +1,8 @@
+.ul-con {
+  display: flex;
+  flex-wrap: wrap;
+}
+.pop {
+  font-family: 'Lobster';
+  text-align: center;
+}
