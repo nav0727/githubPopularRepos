@@ -9,3 +9,14 @@
 .load {
   text-align: center;
 }
+
+@media screen and (max-width: 700px) {
+  .ul {
+    display: flex;
+    overflow: scroll;
+  }
+}
+
+.ul {
+  display: flex;
+}

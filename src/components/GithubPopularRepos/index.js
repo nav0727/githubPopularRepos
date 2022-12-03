@@ -71,11 +71,11 @@ class GithubPopularRepos extends Component {
   )
 
   renderFailureView = () => (
-    <div className="failure-view-container">
+    <div className="">
       <img
         src="https://assets.ccbp.in/frontend/react-js/api-failure-view.png"
         alt="failure view"
-        className="failure-view-image"
+        className=""
       />
       <h1 className="error-message">Something Went Wrong</h1>
     </div>
@@ -119,7 +119,7 @@ class GithubPopularRepos extends Component {
     const {activeTab} = this.state
 
     return (
-      <ul className="ul-con">
+      <ul className="ul">
         {languageFiltersData.map(each => (
           <LanguageFilterItem
             key={each.id}
